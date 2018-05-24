@@ -1,0 +1,17 @@
+{
+    "short_name": "PWA minimal-ui",
+    "name": "PWA minimal-ui Display Test",
+    "description": "PWA minimal-ui Display Test",
+    "scope": "/minimal-ui/",
+    "background_color": "#5A0FC8",
+    "theme_color": "#5A0FC8",
+    "start_url": "/minimal-ui/?utm_source=pwa",
+    "display": "minimal-ui",
+    "icons": [
+        {
+            "src": "./images/manifest/app-icon-minimal-ui-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

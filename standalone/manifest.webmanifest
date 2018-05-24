@@ -1,0 +1,17 @@
+{
+    "short_name": "PWA standalone",
+    "name": "PWA standalone Display Test",
+    "description": "PWA standalone Display Test",
+    "scope": "/standalone/",
+    "background_color": "#5A0FC8",
+    "theme_color": "#5A0FC8",
+    "start_url": "/standalone/?utm_source=pwa",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./images/manifest/app-icon-standalone-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

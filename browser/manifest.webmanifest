@@ -1,0 +1,17 @@
+{
+    "short_name": "PWA browser",
+    "name": "PWA browser Display Test",
+    "description": "PWA browser Display Test",
+    "scope": "/browser/",
+    "background_color": "#5A0FC8",
+    "theme_color": "#5A0FC8",
+    "start_url": "/browser/?utm_source=pwa",
+    "display": "browser",
+    "icons": [
+        {
+            "src": "./images/manifest/app-icon-browser-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
