@@ -1,7 +1,7 @@
 {
     "short_name": "PWA standalone",
-    "name": "PWA standalone Display Test",
-    "description": "PWA standalone Display Test",
+    "name": "PWA Display Test: standalone",
+    "description": "See how a standalone Progressive Web App (PWA) looks and feels on various devices and operating systems. Try it on Android, iOS, Linux, macOS, Windows, and more.",
     "scope": "/standalone/",
     "background_color": "#5A0FC8",
     "theme_color": "#5A0FC8",
