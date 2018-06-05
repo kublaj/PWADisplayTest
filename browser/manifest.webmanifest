@@ -1,6 +1,6 @@
 {
     "short_name": "PWA browser",
-    "name": "PWA Display Test: browser",
+    "name": "PWA browser Display Test",
     "description": "See how browser Progressive Web Apps (PWAs) look and feel on your devices and platforms. Try it on Android, iOS, Linux, macOS, Windows, and other operating systems.",
     "scope": "/browser/",
     "background_color": "#5A0FC8",
