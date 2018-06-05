@@ -1,3 +1,8 @@
+/*
+ *  PWA Display Test. Copyright (c) 2018 HWALab. MIT License.
+ *  https://hwalab.com/pwadisplaytest/
+ */
+
 /* eslint-disable no-console */
 
 let installPromptEvent;
