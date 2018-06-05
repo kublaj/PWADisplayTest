@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 
+let installPromptEvent;
 const installLink = document.querySelector(".install-link");
 
 // Install App functionality
@@ -10,19 +11,21 @@ window.addEventListener("beforeinstallprompt", event => {
     // Suppress automatic prompting
     event.preventDefault();
 
+    // Stash the event so it can be triggered later.
+    installPromptEvent = event;
+
     // Show the (hidden-by-default) install link
     installLink.hidden = false;
+});
 
-    // Wait for the user to click the link
-    installLink.addEventListener("click", async ev => {
-        console.log("Install App Link Click Event");
-        ev.preventDefault();
+installLink.addEventListener("click", async event => {
+    console.log("Install App Link Click Event");
+    event.preventDefault();
 
-        // The prompt() method can only be used once.
-        installLink.hidden = true;
+    // The prompt() method can only be used once.
+    installLink.hidden = true;
 
-        // Show the prompt.
-        const { userChoice } = await event.prompt();
-        console.info(`User choice was: ${userChoice}`);
-    });
+    // Show the prompt.
+    const { userChoice } = await installPromptEvent.prompt();
+    console.info(`User choice was: ${userChoice}`);
 });
