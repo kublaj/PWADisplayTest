@@ -4,7 +4,6 @@ let installPromptEvent;
 const installLink = document.querySelector(".install-link");
 
 // Install App functionality
-// Based on {@link https://w3c.github.io/manifest/#usage-example}
 window.addEventListener("beforeinstallprompt", event => {
     console.log("beforeinstallprompt Event");
 
@@ -18,14 +17,24 @@ window.addEventListener("beforeinstallprompt", event => {
     installLink.hidden = false;
 });
 
-installLink.addEventListener("click", async event => {
+installLink.addEventListener("click", event => {
     console.log("Install App Link Click Event");
     event.preventDefault();
 
-    // The prompt() method can only be used once.
+    // Update the install UI to remove the install button
     installLink.hidden = true;
 
-    // Show the prompt.
-    const { userChoice } = await installPromptEvent.prompt();
-    console.info(`User choice was: ${userChoice}`);
+    // Show the modal add to home screen dialog
+    installPromptEvent.prompt();
+
+    // Wait for the user to respond to the prompt
+    installPromptEvent.userChoice.then(choice => {
+        if (choice.outcome === "accepted") {
+            console.log("User accepted the A2HS prompt");
+        } else {
+            console.log("User dismissed the A2HS prompt");
+        }
+        // Clear the saved prompt since it can't be used again
+        installPromptEvent = null;
+    });
 });
